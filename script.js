@@ -1,18 +1,10 @@
-// toggle icon navbar
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can add code to handle form submission, such as sending the data to a server or displaying a success message.
+    alert('Message sent successfully!');
+  });
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
-
-
-// scroll sections
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
+  window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 100;
